@@ -1,31 +1,45 @@
-# week-16-lab
+# Week 16 lab
 
-Week 16 Lab exercises on CI and CD
+Week 16 Lab exercises on CI and CD. Using Github actions
 
+## Development
+
+```bash
+# running locally
+(cd app && npm start)
+
+# unit testing
+(cd app && npm test)
+
+# linting
+(cd app && npm run lint)
+
+# security audit
+(cd app && npm aduit)
+
+```
 
 ## Links
 
 see [Github Actions, Getting started](https://docs.github.com/en/actions/quickstart)
+
 ## Your mission
 
 1. [ ] Get CI to test for insecure modules
-    1. [ ] Fix issues
-    1. [ ] recommit
+   1. [ ] Fix issues
+   1. [ ] recommit
 1. [ ] Get CI to detect messed up JS
-    1. [ ] Fix issues
-    1. [ ] recommit
-    1. [ ] Mash it up again
-    1. [ ] recommit
+   1. [ ] Fix issues
+   1. [ ] recommit
+   1. [ ] Mash it up again
+   1. [ ] recommit
 1. [ ] Get CI to run unit testing
-    1. [ ] Fix issues
-    1. [ ] recommit
-    1. [ ] Add a new test case for Bulgarian
-    1. [ ] recommit
+   1. [ ] Fix issues
+   1. [ ] recommit
+   1. [ ] Add a new test case for Bulgarian
+   1. [ ] recommit
 1. Create a new project called `combined/` which outputs a
-hello greeting depending on the language you pass in the url
-    1. [ ] It must lint
-    1. [ ] It must check for known security vulns in dependencies
-    1. [ ] It must run unit tests for new languages
+   hello greeting depending on the language you pass in the url 1. [ ] It must lint 1. [ ] It must check for known security vulns in dependencies 1. [ ] It must run unit tests for new languages
 1. Add secrets scanning (`git-secrets`? `talisman`?)
 
 ## Session 16 todo
@@ -54,6 +68,5 @@ hello greeting depending on the language you pass in the url
 - [ ] Create Network load balancer (NLB)
 - [ ] Connect load balancer to instance
 - [ ] Deploy application to private instance
-
 
 ![Stick your secrets here](stick-secrets-here.png)
