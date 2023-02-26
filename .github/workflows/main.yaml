@@ -24,6 +24,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: TruffleHog secrets scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          path: ./
+          base: ${{ github.event.repository.default_branch }}
+          head: HEAD
+          extra_args: --debug --only-verified
+
       - name: setup nodejs
         uses: actions/setup-node@v3
         with:
