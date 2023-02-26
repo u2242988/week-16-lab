@@ -2,6 +2,8 @@
 
 Week 16 Lab exercises on CI and CD. Using Github actions
 
+This is a rudimentary [Express.js](https://expressjs.com/) based website. Your job is to get the CI fully setup and also the CD to get it deployed to AWS
+
 ## Development
 
 ```bash
@@ -21,23 +23,15 @@ Week 16 Lab exercises on CI and CD. Using Github actions
 
 ## Links
 
-see [Github Actions, Getting started](https://docs.github.com/en/actions/quickstart)
+see
+
+- [Github Actions, Getting started](https://docs.github.com/en/actions/quickstart)
+- EJS templating [https://ejs.co/](https://ejs.co/)
 
 ## Your mission
 
-1. [ ] Get CI to test for insecure modules
-   1. [ ] Fix issues
-   1. [ ] recommit
-1. [ ] Get CI to detect messed up JS
-   1. [ ] Fix issues
-   1. [ ] recommit
-   1. [ ] Mash it up again
-   1. [ ] recommit
-1. [ ] Get CI to run unit testing
-   1. [ ] Fix issues
-   1. [ ] recommit
-   1. [ ] Add a new test case for Bulgarian
-   1. [ ] recommit
+1. [ ] Fork the repo
+1. [ ] implement the 
 1. Create a new project called `combined/` which outputs a
    hello greeting depending on the language you pass in the url 1. [ ] It must lint 1. [ ] It must check for known security vulns in dependencies 1. [ ] It must run unit tests for new languages
 1. Add secrets scanning (`git-secrets`? `talisman`?)

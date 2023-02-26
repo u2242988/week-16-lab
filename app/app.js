@@ -36,4 +36,6 @@ app.use(function (err, req, res) {
   res.render("error");
 });
 
+const secretPassword = "very Secret password";
+
 module.exports = app;
