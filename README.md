@@ -7,8 +7,8 @@ This is a rudimentary [Express.js](https://expressjs.com/) based website. Your j
 ## Development
 
 ```bash
-# running locally
-(cd app && npm start)
+# running locally, sits on port 3000 by default
+(cd app && DEBUG=* PORT=3000 npm start)
 
 # unit testing
 (cd app && npm test)
@@ -18,7 +18,6 @@ This is a rudimentary [Express.js](https://expressjs.com/) based website. Your j
 
 # security audit
 (cd app && npm aduit)
-
 ```
 
 ## Links
@@ -31,20 +30,20 @@ see
 ## Your mission
 
 1. [ ] Fork the repo
-1. [ ] implement the 
-1. Create a new project called `combined/` which outputs a
-   hello greeting depending on the language you pass in the url 1. [ ] It must lint 1. [ ] It must check for known security vulns in dependencies 1. [ ] It must run unit tests for new languages
-1. Add secrets scanning (`git-secrets`? `talisman`?)
-
-## Session 16 todo
+1. [ ] Get it working locally
+1. [ ] implement the missing steps in `.github/workflows/main.yaml`
+   1. [ ] Add supply chain scanning and fix any issues
+   1. [ ] Add unit testing
+1. [ ] Create base infra as per two objectives and target arch below
+1. [ ] Get infra scripts and continious deployment working by implementing `/infra/deploy.sh`
+1. [ ] Implement the `/about` page and git it to deploy end-to-end
 
 ![target AWS arch](session-16-aws-target-arch.png)
 
-### Objective get networking and CI working
+### Objective 1 - get base infra working - get networking and CI working
 
 - [ ] Create VPC: `10.0.0.0/22`
 - [ ] Get Github actions to deploy your IaC
-
 - [ ] Create Pub subnets:
   - [ ] a: `10.0.0.0/24`
   - [ ] b: `10.0.1.0/24`
@@ -55,12 +54,14 @@ see
 - [ ] Create NAT gateway
 - [ ] Create Private Route Table
 
-### Objective create secondary infra
+### Objective 2 - create secondary infra
 
 - [ ] Clickops a `t3.micro` instance in a public subnet with port 22 open and ssh in
+- [ ] Use the `infra/ec2-user-data.sh` script to get your application working on there
 - [ ] Delete that instance and script a `t3.micro` instance into the private subnet
 - [ ] Create Network load balancer (NLB)
 - [ ] Connect load balancer to instance
-- [ ] Deploy application to private instance
+- [ ] Deploy application to a private instance
+- [ ] Test application via load-balancer
 
-![Stick your secrets here](stick-secrets-here.png)
+![Stick your AWS secrets here](stick-secrets-here.png)
