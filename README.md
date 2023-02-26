@@ -1,6 +1,6 @@
 # Week 16 lab
 
-![main.yaml](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+![main.yaml](https://github.com/github/docs/actions/workflows/main.yaml/badge.svg)
 
 Week 16 Lab exercises on CI and CD. Using Github actions
 
