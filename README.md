@@ -1,16 +1,20 @@
 # Week 16 lab
 
-![main.yaml](https://github.com/github/docs/actions/workflows/main.yaml/badge.svg)
+![Lint and test and deploy](https://github.com/github/docs/actions/workflows/main.yaml/badge.svg)
 
 Week 16 Lab exercises on CI and CD. Using Github actions
 
-This is a rudimentary [Express.js](https://expressjs.com/) based website. Your job is to get the CI fully setup and also the CD to get it deployed to AWS
+This is a rudimentary [Express.js](https://expressjs.com/) based website. Your job is to get the CI fully setup and also the CD to get it deployed to AWS. Make a change and see it re-deployed
 
 ## Development
 
 ```bash
 # running locally, sits on port 3000 by default
 (cd app && DEBUG=* PORT=3000 npm start)
+# to test
+curl http://localhost:3000/\?language\=gurmukhi
+# or
+firefix http://localhost:3000/?language=gurmukhi
 
 # unit testing
 (cd app && npm test)
@@ -24,8 +28,6 @@ This is a rudimentary [Express.js](https://expressjs.com/) based website. Your j
 
 ## Links
 
-see
-
 - [Github Actions, Getting started](https://docs.github.com/en/actions/quickstart)
 - EJS templating [https://ejs.co/](https://ejs.co/)
 
@@ -38,7 +40,7 @@ see
    1. [ ] Add unit testing
 1. [ ] Create base infra as per two objectives and target arch below
 1. [ ] Get infra scripts and continious deployment working by implementing `/infra/deploy.sh`
-1. [ ] Implement the `/about` page and git it to deploy end-to-end
+1. [ ] Implement the `/about` page and watch it deploy end-to-end
 
 ![target AWS arch](session-16-aws-target-arch.png)
 
