@@ -36,7 +36,7 @@ cat <<EOF >>/home/ec2-user/index.html
     <body>
         <h1>Welcome Warwick WM145 peeps</h1>
         <div>We hope you enjoy our debug page</div>
-        <div>https://placedog.net/500/280</div>
+        <div><img src="https://placedog.net/500/280" /></div>
     </body>
 </html>
 EOF
