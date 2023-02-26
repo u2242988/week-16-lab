@@ -1,5 +1,7 @@
 # Week 16 lab
 
+![main.yaml](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)
+
 Week 16 Lab exercises on CI and CD. Using Github actions
 
 This is a rudimentary [Express.js](https://expressjs.com/) based website. Your job is to get the CI fully setup and also the CD to get it deployed to AWS
