@@ -1,6 +1,6 @@
 # Week 16 lab
 
-![Lint and test and deploy](https://github.com/github/docs/actions/workflows/main.yaml/badge.svg)
+[![Lint and test and deploy](https://github.com/warwick-cybersecurity-WM145-24/week-16-lab/actions/workflows/main.yaml/badge.svg)](https://github.com/warwick-cybersecurity-WM145-24/week-16-lab/actions/workflows/main.yaml)
 
 Week 16 Lab exercises on CI and CD. Using Github actions
 
