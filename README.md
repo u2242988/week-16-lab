@@ -59,13 +59,12 @@ firefox http://localhost:3000/?language=gurmukhi
 
 - [ ] Create VPC: `10.0.0.0/22`
 - [ ] Get Github actions to deploy your IaC
-- [ ] Create Pub subnets:
+- [ ] Create Pub subnet:
   - [ ] a: `10.0.0.0/24`
-  - [ ] b: `10.0.1.0/24`
 - [ ] Create Pvt Subnets:
   - [ ] a: `10.0.2.0/24`
 - [ ] Create IGW
-- [ ] Create Public Route Tables
+- [ ] Create Public Route Table
 - [ ] Create NAT gateway
 - [ ] Create Private Route Table
 
