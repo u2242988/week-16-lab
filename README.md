@@ -6,6 +6,22 @@ Week 16 Lab exercises on CI and CD. Using Github actions
 
 This is a rudimentary [Express.js](https://expressjs.com/) based website. Your job is to get the CI fully setup and also the CD to get it deployed to AWS. Make a change and see it re-deployed
 
+## Project structure
+
+```bash
+# main project directories
+.
+├── app
+│   ├── app.js                # main application entrypoint
+│   ├── lib                   # our hello greetings library
+│   ├── routes                # HTTP route logic contained here
+│   └── views                 # HTML templates stored here
+├── infra
+│   ├── deploy.sh             # main cloudformation launch script placeholder
+│   └── ec2-user-data.sh      # script to pre-configure your ec2 instance
+├── README.md                 # This doc
+```
+
 ## Development
 
 ```bash
@@ -38,7 +54,6 @@ firefix http://localhost:3000/?language=gurmukhi
 1. [ ] implement the missing steps in `.github/workflows/main.yaml`
    1. [ ] Add supply chain scanning and fix any issues
    1. [ ] Add unit testing
-   1. [ ] add cfn_nag to lint the `infra/` directory
 1. [ ] Create base infra as per two objectives and target arch below
 1. [ ] Get infra scripts and continious deployment working by implementing `/infra/deploy.sh`
 1. [ ] Implement the `/about` page and watch it deploy end-to-end
@@ -65,9 +80,8 @@ firefix http://localhost:3000/?language=gurmukhi
   - [ ] Use the `infra/ec2-user-data.sh` script to get your application working on there
   - [ ] `ssh ec2-user@<instance-public-ip>`
 - [ ] Delete that instance and script a `t3.micro` instance into the private subnet
-- [ ] Create Network load balancer (NLB)
+- [ ] script a Network load balancer (NLB)
 - [ ] Connect load balancer to instance
-- [ ] Deploy application to a private instance
 - [ ] Test application via load-balancer
 
 ![Stick your AWS secrets here](stick-secrets-here.png)
