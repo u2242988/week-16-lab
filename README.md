@@ -29,8 +29,8 @@ This is a rudimentary [Express.js](https://expressjs.com/) based website. Your j
 (cd app && DEBUG=* PORT=3000 npm start)
 # to test
 curl http://localhost:3000/\?language\=gurmukhi
-# or
-firefix http://localhost:3000/?language=gurmukhi
+# or launch in browser
+firefox http://localhost:3000/?language=gurmukhi
 
 # unit testing
 (cd app && npm test)
@@ -41,11 +41,6 @@ firefix http://localhost:3000/?language=gurmukhi
 # security audit
 (cd app && npm aduit)
 ```
-
-## Links
-
-- [Github Actions, Getting started](https://docs.github.com/en/actions/quickstart)
-- EJS templating [https://ejs.co/](https://ejs.co/)
 
 ## Your mission
 
@@ -85,3 +80,9 @@ firefix http://localhost:3000/?language=gurmukhi
 - [ ] Test application via load-balancer
 
 ![Stick your AWS secrets here](stick-secrets-here.png)
+
+## Links
+
+- Github actions [getting started](https://docs.github.com/en/actions/quickstart)
+- EJS templating [https://ejs.co/]()
+- Counterstrike cloudformation [https://github.com/jujhars13/counterstrike-server]()
