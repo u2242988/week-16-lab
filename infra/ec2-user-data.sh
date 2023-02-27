@@ -9,7 +9,6 @@ readonly logName="/var/log/server-setup.log"
 echo "Starting $(date)" | tee -a "${logName}"
 
 echo "Install required tools" | tee -a "${logName}"
-yum update
 yum install -y \
     docker \
     iptraf-ng \
@@ -48,5 +47,13 @@ docker run -d \
     -p 8080:80 \
     nginx
 
-###########################################################
-## 👇👇👇👇 INSTALL your application here 👇👇👇👇👇
+############################################################
+## 👇👇👇👇👇 application INSTALL commands here 👇👇👇👇👇
+
+echo "installing Nodejs using NVM" | tee -a "${logName}"
+$ curl --silent --location https://rpm.nodesource.com/setup_18.x | bash -
+yum -y install nodejs
+echo "installing application" | tee -a "${logName}"
+(cd /home/ec2-user && git clone https://github.com/warwick-cybersecurity-WM145-24/week-16-lab.git)
+echo "starting application $(date)" | tee -a "${logName}"
+(cd /home/ec2-user/week-16-lab/app && DEBUG=* PORT=80 npm start)
