@@ -38,7 +38,6 @@ jobs:
           node-version: 18.x
           registry-url: "https://registry.npmjs.org"
           # cache: npm
-
       - name: install deps
         working-directory: app
         run: |
@@ -51,7 +50,11 @@ jobs:
 
       # TODO: add supply chain scanning
 
-      # TODO: add unit testing
+      #  unit-test
+      - name: run testing
+        working-directory: app
+        run: |
+          npm run test
 
       # TODO: add cloudformation linting
 
